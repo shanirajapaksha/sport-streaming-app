@@ -1,0 +1,527 @@
+.container {
+    min-height: 100vh;
+    background-color: var(--black);
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--light);
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .navButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--light);
+    transition: color 0.2s;
+  }
+  
+  .navButton:hover {
+    color: var(--primary);
+  }
+  
+  .signUpButton, .signInButton {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  
+  .signUpButton {
+    background-color: var(--primary);
+    color: var(--light);
+  }
+  
+  .signUpButton:hover {
+    background-color: var(--black);
+  }
+  
+  .signInButton {
+    background-color: var(--light);
+    color: #000;
+    border: 1px solid var(--light);
+  }
+  
+  .signInButton:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .sportFilter {
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .icon{
+    color: var(--light);
+  }
+
+  .sectionTitle{
+    color: var(--light);
+  }
+
+  .sportButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .sportButton {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .sportButton:hover {
+    background-color: var(--primary);
+  }
+  
+  .activeSport {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: #000;
+  }
+  
+  .tabContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .tabs {
+    display: flex;
+  }
+  
+  .tab {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+  }
+  
+  .tab:hover {
+    color: var(--primary);
+  }
+  
+  .activeTab {
+    color: var(--primary);
+    border-bottom-color: var(--primary-dark);
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+  }
+  
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section {
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sectionHeading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light);
+  }
+  
+  .streamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    color: var(--light);
+  }
+  
+  .streamCardLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .streamCard {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1f1d1d;
+    box-shadow: 0 2px 8px rgba(66, 52, 52, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .streamCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .streamThumbnail {
+    position: relative;
+    height: 160px;
+    background-color: #1f1d1d;
+  }
+  
+  .thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .liveBadge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #ff0000;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .playIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .streamThumbnail:hover .playIcon {
+    opacity: 1;
+  }
+  
+  .streamInfo {
+    padding: 1rem;
+  }
+  
+  .streamTitle {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .streamMeta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .viewers {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .todayStreams {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .todayStreamCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1f1d1d;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    color: var(--light);
+  }
+  
+  .todayStreamCard:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .sportName {
+    font-size: 0.9rem;
+    color: #a79c9c;
+  }
+  
+  .timeContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .timeBadge {
+    background-color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .arrowButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+  }
+  
+  .arrowButton:hover {
+    color: #000;
+  }
+  
+  .upcomingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .upcomingCard {
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: box-shadow 0.2s;
+    color: var(--light);
+  }
+  
+  .upcomingCard:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upcomingHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .dateBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .reminderButton {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .reminderButton:hover {
+    background-color: #9c9292;
+  }
+  
+  .calendarView {
+    margin-top: 1.5rem;
+  }
+  
+  .calendarDay {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    color: var(--light);
+  }
+  
+  .calendarDate {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .calendarEvent {
+    padding: 0.5rem;
+    background-color: #1f1d1d;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .historyItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+  }
+  
+  .historyMain {
+    flex: 1;
+  }
+  
+  .historyTitle {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--light);
+  }
+  
+  .historyDate {
+    font-size: 0.9rem;
+    color: var(--light);
+  }
+  
+  .historyResult {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    border-radius: 20px;
+  }
+  
+  .sortButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: #666;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .featuredSection {
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: var(--light);
+  }
+  
+  .featuredHeading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .featuredList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .featuredItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #1f1d1d;
+    border-radius: 8px;
+  }
+  
+  .featuredTitle {
+    font-size: 0.95rem;
+  }
+  
+  .featuredMeta {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .viewerIcon {
+    color: #666;
+  }
+  
+  @media (max-width: 1024px) {
+    .contentGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+      grid-row: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    .navLinks {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .tabs {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    
+    .tab {
+      white-space: nowrap;
+    }
+    
+    .streamGrid, .upcomingGrid {
+      grid-template-columns: 1fr;
+    }
+  }

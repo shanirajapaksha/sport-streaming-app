@@ -1,0 +1,201 @@
+.page {
+    background-color: var(--black);
+    color: var(--light);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+  
+  .videoContainer {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .youtubeIframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+  
+  .videoControls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  }
+  
+  .controlsInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .controlButtons button {
+    background: none;
+    border: none;
+    color: var(--light);
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .viewersInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .liveLabel {
+    background: var(--primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .viewersCount {
+    font-size: 14px;
+  }
+  
+  .streamInfo {
+    margin-top: 20px;
+  }
+  
+  .streamTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .category {
+    color: var(--background);
+    margin-bottom: 10px;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .likeButton, .shareButton, .moreButton {
+    background-color: var(--background);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .liked {
+    background-color: var(--primary);
+  }
+  
+  .chatColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .subscribeCard, .chatSection, .relatedMatches {
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .cardDescription {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 12px;
+  }
+  
+  .subscribeButton {
+    width: 100%;
+    background-color: var(--primary);
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .chatMessages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .chatMessage {
+    margin-bottom: 6px;
+  }
+  
+  .chatUser {
+    font-weight: bold;
+    margin-right: 6px;
+    color: var(--primary);
+  }
+  
+  .noComments {
+    color: #888;
+  }
+  
+  .chatInputForm {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .chatInput {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  .chatSubmitButton {
+    padding: 8px 10px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .relatedMatchList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .relatedMatchItem {
+    cursor: pointer;
+    padding: 8px;
+    background-color: var(--background-dark);
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .relatedMatchItem:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .matchTitle {
+    font-weight: bold;
+  }
+  
+  .matchTime {
+    font-size: 12px;
+    color: #bbb;
+  }
+  
