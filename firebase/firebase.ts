@@ -2,9 +2,12 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import * as dotenv from 'dotenv';
+
+dotenv.config(); // local .env file
 
 const firebaseConfig = {
-    apiKey: "AIzaSyATjI3c2jUj9o_iZAssXnAOrwcfQjAVXSk",
+    apiKey: process.env.API_KEY,
     authDomain: "appsportstreaming.firebaseapp.com",
     databaseURL: "https://appsportstreaming-default-rtdb.firebaseio.com",
     projectId: "appsportstreaming",
